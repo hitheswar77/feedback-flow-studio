@@ -11,14 +11,14 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl gradient-primary mb-6 shadow-hover">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-primary mb-6">
             <MessageSquare className="w-10 h-10 text-primary-foreground" />
           </div>
-          <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-glow to-secondary mb-4">
+          <h1 className="text-5xl font-bold text-foreground mb-4">
             Feedback Hub
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
