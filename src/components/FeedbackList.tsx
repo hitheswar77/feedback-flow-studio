@@ -66,7 +66,7 @@ export const FeedbackList = ({ refreshTrigger }: { refreshTrigger: number }) => 
         <p className="text-muted-foreground mt-1">See what others are saying</p>
       </div>
       
-      <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
+      <div className="space-y-4">
         {feedbacks.map((feedback) => (
           <FeedbackCard
             key={feedback.id}

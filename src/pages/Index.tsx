@@ -14,7 +14,7 @@ const Index = () => {
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12 animate-in fade-in slide-in-from-top duration-700">
+        <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl gradient-primary mb-6 shadow-hover">
             <MessageSquare className="w-10 h-10 text-primary-foreground" />
           </div>
@@ -27,7 +27,7 @@ const Index = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-8 animate-in fade-in slide-in-from-bottom duration-700 delay-150">
+        <div className="grid lg:grid-cols-2 gap-8">
           {/* Feedback Form */}
           <div>
             <FeedbackForm onSuccess={handleFeedbackSuccess} />
@@ -40,7 +40,7 @@ const Index = () => {
         </div>
 
         {/* Footer */}
-        <div className="mt-16 text-center text-sm text-muted-foreground animate-in fade-in duration-700 delay-300">
+        <div className="mt-16 text-center text-sm text-muted-foreground">
           <p>Built with ❤️ using Lovable & Supabase</p>
         </div>
       </div>
