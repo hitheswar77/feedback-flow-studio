@@ -67,9 +67,9 @@ export const FeedbackForm = ({ onSuccess }: { onSuccess: () => void }) => {
   };
 
   return (
-    <div className="gradient-card rounded-2xl p-8 shadow-soft transition-smooth hover:shadow-hover">
+    <div className="rounded-2xl p-8 bg-card border border-border shadow-lg">
       <div className="mb-6">
-        <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-glow">
+        <h2 className="text-3xl font-bold text-foreground">
           Share Your Feedback
         </h2>
         <p className="mt-2 text-muted-foreground">We'd love to hear from you. Your feedback helps us improve!</p>
@@ -87,7 +87,6 @@ export const FeedbackForm = ({ onSuccess }: { onSuccess: () => void }) => {
                   <Input
                     placeholder="Enter your name"
                     {...field}
-                    className="transition-smooth focus:shadow-soft"
                   />
                 </FormControl>
                 <FormMessage />
@@ -106,7 +105,6 @@ export const FeedbackForm = ({ onSuccess }: { onSuccess: () => void }) => {
                     type="email"
                     placeholder="your.email@example.com"
                     {...field}
-                    className="transition-smooth focus:shadow-soft"
                   />
                 </FormControl>
                 <FormMessage />
@@ -129,12 +127,12 @@ export const FeedbackForm = ({ onSuccess }: { onSuccess: () => void }) => {
                         onClick={() => field.onChange(rating)}
                         onMouseEnter={() => setHoveredRating(rating)}
                         onMouseLeave={() => setHoveredRating(0)}
-                        className="transition-smooth transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-full"
+                        className="transition-all transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-full"
                       >
                         <Star
-                          className={`w-8 h-8 transition-smooth ${
+                          className={`w-8 h-8 transition-colors ${
                             rating <= (hoveredRating || selectedRating)
-                              ? "fill-secondary stroke-secondary"
+                              ? "fill-primary stroke-primary"
                               : "fill-muted stroke-muted-foreground"
                           }`}
                         />
@@ -156,7 +154,7 @@ export const FeedbackForm = ({ onSuccess }: { onSuccess: () => void }) => {
                 <FormControl>
                   <Textarea
                     placeholder="Tell us more about your experience..."
-                    className="min-h-[120px] transition-smooth focus:shadow-soft resize-none"
+                    className="min-h-[120px] resize-none"
                     {...field}
                   />
                 </FormControl>
@@ -168,7 +166,7 @@ export const FeedbackForm = ({ onSuccess }: { onSuccess: () => void }) => {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full gradient-primary font-semibold text-lg py-6 transition-smooth hover:scale-[1.02] hover:shadow-hover disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full font-semibold text-lg py-6"
           >
             {isSubmitting ? "Submitting..." : "Submit Feedback"}
           </Button>
